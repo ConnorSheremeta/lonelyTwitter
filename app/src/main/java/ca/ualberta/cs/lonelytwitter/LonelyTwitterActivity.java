@@ -30,11 +30,29 @@ public class LonelyTwitterActivity extends Activity {
 	private EditText bodyText;
 	private ArrayList<Tweet> tweets = new ArrayList<Tweet>();
 	private ListView oldTweetsList;
+<<<<<<< HEAD
 	private ArrayAdapter<Tweet> adapter;
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
+=======
+
+	
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		Tweetable tweet;
+		try{
+			tweet = new ImortantTweet("LONGER THAN 140!");
+		}catch (IOException e) {
+		//do smething here
+			throw new RuntimeException(e);
+		}
+
+		tweet.isImportant();
+
+>>>>>>> 2c6c05bbddb6c3e8ee4320d4153bfa60dec0cf6d
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
